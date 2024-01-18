@@ -16,3 +16,18 @@ WHERE [Bonus%] > (SELECT AVG([Bonus%]) FROM MillenMfg)
 GROUP BY Department
 ORDER BY COUNT(*) DESC
 `
+![02](https://github.com/llamacorn118/Project-01/assets/153336914/865c5c30-28b0-4d2c-8776-656926198d77)
+
+##3. Find out managers that has the largest number of subordinates whose Bonus% are higher than average of their region (Most interesting;
+involving self join and correlated subquery)
+
+`SELECT E.MgrID, M.[First Name], M.[Last Name], COUNT(*) AS No_Emp_GreaterBonus
+FROM MillenMfg AS M
+INNER JOIN MillenMfg AS E
+ON M.EmpID= E.MgrID
+WHERE E.[Bonus%] > 
+(SELECT AVG ([Bonus%]) FROM MillenMfg WHERE Region = E.Region 
+GROUP BY Region)
+GROUP BY E.MgrID, M.[First Name], M.[Last Name], M.[Last Name]
+ORDER BY COUNT(*) DESC
+`
