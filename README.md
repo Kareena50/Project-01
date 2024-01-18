@@ -16,6 +16,7 @@ WHERE [Bonus%] > (SELECT AVG([Bonus%]) FROM MillenMfg)
 GROUP BY Department
 ORDER BY COUNT(*) DESC
 `
+
 ![02](https://github.com/llamacorn118/Project-01/assets/153336914/865c5c30-28b0-4d2c-8776-656926198d77)
 
 ##3. Find out managers that has the largest number of subordinates whose Bonus% are higher than average of their region (Most interesting;
@@ -31,3 +32,5 @@ GROUP BY Region)
 GROUP BY E.MgrID, M.[First Name], M.[Last Name], M.[Last Name]
 ORDER BY COUNT(*) DESC
 `
+
+![03](https://github.com/llamacorn118/Project-01/assets/153336914/b49c8ecc-7fe4-48b4-a0a3-0a10f4d1dd52)
