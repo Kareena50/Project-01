@@ -1,6 +1,6 @@
 # Project-01
 
-Created by Krina Gajjar. 
+Created by Krina Gajjar.  
 
 ##1.	Find regions that have most per-person donation (take the current database, treat the "Salary" column as "Donation")
 
