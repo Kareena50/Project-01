@@ -1,4 +1,7 @@
 # Project-01
+
+The database in excel can be found [here]([MillenniumManufacturing2024Budget.xlsx](https://github.com/llamacorn118/Project-01/files/13974381/MillenniumManufacturing2024Budget.xlsx))
+
 #1.	Find regions that have most per-person donation (take the current database, treat the "Salary" column as "Donation")
 
 `SELECT Region, SUM(Salary) AS TotalDonation, COUNT(*) AS NumOfDonars_EachRegion, AVG (Salary) AS AvgPerRegion
